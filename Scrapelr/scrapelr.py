@@ -23,7 +23,8 @@ HTML_PARSER     = 'html.parser' # <-- html.parser seems to be the best for this 
 
 #HTTP Headers
 HEADERS   = {
-'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0"
+'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0" \
+              if os.environ.get('user_agent') is None else os.environ.get('user_agent')
 }
 
 VERBOSE = False

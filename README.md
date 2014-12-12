@@ -30,7 +30,19 @@ Usage
       --destination PATH, -d PATH
                             Destination directory.
 
-### Examples
+Environment Variables
+---------------------
+
+### user_agent
+
+Sets the *User-Agent* string. If not set, dumplr will fallback to a hardcodet default.
+
+### http_proxy
+
+Proxy to use.
+
+Examples
+--------
 
 Fetching images from blog pages 1, 2, 4, 22, 30, 31, 32, 33, 34, 35:
 
@@ -44,7 +56,8 @@ Fetching images from all pages and store them in a specific directory:
 
     dumpl -d my_tumblr_images -a -l 10 http://myblog.tumblr.com
 
-#### What's the ```-l``` option for?
+What's the ```-l``` option for?
+-------------------------------
 
 Thus dumplr is not using the tumblr api, it must somehow detect the last page of the blog.
 If it requests a blog page, which is out of range, it will get a page without any posts.
